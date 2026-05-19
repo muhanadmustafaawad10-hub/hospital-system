@@ -1,0 +1,140 @@
+:root {
+  /* 🎨 Main Colors */
+  --primary: #5b8cc9;
+  --primary-light: #e7f0fb;
+
+  /* 🟦 Sidebar */
+  --sidebar-bg: linear-gradient(180deg, #6ea8dc, #5b8cc9);
+  --sidebar-text: #ffffff;
+  --sidebar-hover: rgba(255, 255, 255, 0.15);
+
+  /* ⚪ Background */
+  --main-bg: #f4f7fb;
+  --card-bg: #ffffff;
+
+  /* 🟩 Status Colors */
+  --success: #4caf93;
+  --success-bg: #dff5ee;
+
+  --warning: #f4a261;
+  --warning-bg: #fdebdc;
+
+  --danger: #e76f51;
+  --danger-bg: #fde2dc;
+
+  /* 📝 Text */
+  --text-dark: #2c3e50;
+  --text-light: #7b8a97;
+
+  /* 🟫 Borders & Shadow */
+  --border: #e0e6ed;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+.addDoctor form {
+  width: 65%;
+}
+.DoctorList {
+  width: 85% !important;
+  z-index: 1;
+  border-radius: 10px;
+}
+.DoctorList .content .elements .a {
+  height: 200px;
+  overflow-y: auto;
+}
+.DoctorList .content .elements ul li {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.mainList {
+  background-color: #5b8cc9;
+  padding: 6px !important;
+  color: white;
+  font-weight: 700;
+  width: 100%;
+}
+
+.seconderyList {
+  border-bottom: 1px solid var(--border);
+}
+.addDoctors {
+  width: 40%;
+  position: fixed;
+  left: 40%;
+  top: 20%;
+  /* background-color: #2c3e50; */
+  background-color: white;
+  z-index: 2;
+  border-radius: 10px;
+}
+.addDoctors label {
+  font-weight: 600;
+}
+.addDoctors .save .btnAdd {
+  font-weight: 600;
+}
+.addDoctors .save .btnAdd:last-child {
+  background-color: #8f979f;
+  transition: 0.3s;
+}
+.addDoctors .save .btnAdd:last-child:hover {
+  /* background-color: rgba(122, 137, 133, 0.698); */
+  background-color: #71777c;
+}
+
+.btnAdd.deleting {
+  background-color: #e74c3c;
+  transition: 0.3s;
+}
+.btnAdd.deleting:hover {
+  background-color: #c0392b;
+}
+.addDoctors form {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+/* .swiper-button-next::after {
+  content: "Next";
+  font-size: 14px;
+}
+
+.swiper-button-prev::after {
+  content: "Prev";
+  font-size: 14px;
+} */
+.swiper-pagination-bullet {
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 50%;
+  margin: 0 5px !important;
+  transition: 0.3s;
+  color: black !important;
+  font-weight: bold;
+  background-color: #007bff !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #007bff;
+  width: 30px;
+  border-radius: 10px;
+  color: white !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/* .swiper-pagination {
+  bottom: -35px !important;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000 !important;
+} */

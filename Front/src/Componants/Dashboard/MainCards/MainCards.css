@@ -1,0 +1,166 @@
+:root {
+  /* 🎨 Main Colors */
+  --primary: #5b8cc9;
+  --primary-light: #e7f0fb;
+
+  /* 🟦 Sidebar */
+  --sidebar-bg: linear-gradient(180deg, #6ea8dc, #5b8cc9);
+  --sidebar-text: #ffffff;
+  --sidebar-hover: rgba(255, 255, 255, 0.15);
+
+  /* ⚪ Background */
+  --main-bg: #f4f7fb;
+  --card-bg: #ffffff;
+
+  /* 🟩 Status Colors */
+  --success: #4caf93;
+  --success-bg: #dff5ee;
+
+  --warning: #f4a261;
+  --warning-bg: #fdebdc;
+
+  --danger: #e76f51;
+  --danger-bg: #fde2dc;
+
+  /* 📝 Text */
+  --text-dark: #2c3e50;
+  --text-light: #7b8a97;
+
+  /* 🟫 Borders & Shadow */
+  --border: #e0e6ed;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.onecard {
+  border-radius: 10px;
+  background-color: white;
+  height: fit-content;
+  box-shadow: 0 6px 18px rgba(27, 62, 105, 0.16);
+}
+.theSecond {
+  box-shadow: 0 6px 18px rgba(27, 62, 105, 0.16);
+}
+
+.mainCards h5 {
+  background-color: #dff5ee;
+  color: #2c3e50;
+  font-weight: 650;
+  border-radius: 10px 10px 0 0;
+}
+
+.mainCards h5 {
+  background-color: #4caf93;
+  color: white;
+  font-weight: 650;
+  border-radius: 10px 10px 0 0;
+}
+.mainCards h5.active {
+  background-color: #5b8cc9;
+  color: white;
+
+  font-weight: 650;
+  border-radius: 10px 10px 0 0;
+}
+.mainCards h5.activee {
+  background-color: #4caf93;
+  color: white;
+
+  font-weight: 650;
+  border-radius: 10px 10px 0 0;
+}
+.mainCards h5.activ {
+  background-color: #e76f51;
+  color: white;
+  /* background-color: #dff5ee; */
+  /* color: #2c3e50; */
+  font-weight: 650;
+  border-radius: 10px 10px 0 0;
+}
+
+.onecard p {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.onecard.Doctor ul li.active {
+  background-color: #f4f7fb;
+}
+.onecard ul {
+  height: 150px;
+  overflow-y: auto;
+}
+.onecard ul li {
+  border-bottom: 1px solid var(--border);
+}
+.onecard ul li.active {
+  background-color: #f4f7fb;
+  display: flex;
+  align-items: center;
+}
+.onecard h5 {
+  border-bottom: 1px solid var(--border);
+}
+.onecard span {
+  background-color: #4caf93;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+.oneOpretaion input[type="text"] {
+  width: 70%;
+  border-radius: 10px;
+}
+.oneOpretaion label {
+  width: 20%;
+}
+
+.adding {
+  border-radius: 10px;
+  padding: 15px;
+}
+.adding h5 {
+  border-bottom: 1px solid var(--border);
+}
+
+.adding form {
+  /* padding-bottom: 10px; */
+  /* border-bottom: 1px solid var(--border); */
+  position: relative;
+}
+.adding form button {
+  position: absolute;
+  bottom: 0%;
+  right: 10px;
+  background-color: #5b8cc9;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.adding .special {
+  /* padding-bottom: 10px; */
+  /* border-bottom: 1px solid var(--border); */
+}
+
+.graphCard {
+  border-radius: 10px;
+}
+.graphCard h5 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.graph {
+  /* padding-top: 10px; */
+}
+
+.pending {
+  background-color: #4caf93 !important;
+  font-weight: 500;
+}
+.pending.active {
+  background-color: #e76f51 !important;
+}

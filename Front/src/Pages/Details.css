@@ -1,0 +1,49 @@
+:root {
+  /* 🎨 Main Colors */
+  --primary: #5b8cc9;
+  --primary-light: #e7f0fb;
+
+  /* 🟦 Sidebar */
+  --sidebar-bg: linear-gradient(180deg, #6ea8dc, #5b8cc9);
+  --sidebar-text: #ffffff;
+  --sidebar-hover: rgba(255, 255, 255, 0.15);
+
+  /* ⚪ Background */
+  --main-bg: #f4f7fb;
+  --card-bg: #ffffff;
+
+  /* 🟩 Status Colors */
+  --success: #4caf93;
+  --success-bg: #dff5ee;
+
+  --warning: #f4a261;
+  --warning-bg: #fdebdc;
+
+  --danger: #e76f51;
+  --danger-bg: #fde2dc;
+
+  /* 📝 Text */
+  --text-dark: #2c3e50;
+  --text-light: #7b8a97;
+
+  /* 🟫 Borders & Shadow */
+  --border: #e0e6ed;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.Details {
+  height: 100vh;
+}
+.scedule {
+  background-color: white;
+  z-index: 100000000000 !important;
+  border-radius: 10px;
+}
+.scedule h2 {
+  background-color: #5b8cc9;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+.scedule li {
+  border-bottom: 1px solid var(--border);
+}

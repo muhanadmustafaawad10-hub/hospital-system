@@ -1,0 +1,95 @@
+:root {
+  /* 🎨 Main Colors */
+  --primary: #5b8cc9;
+  --primary-light: #e7f0fb;
+
+  /* 🟦 Sidebar */
+  --sidebar-bg: linear-gradient(180deg, #6ea8dc, #5b8cc9);
+  --sidebar-text: #ffffff;
+  --sidebar-hover: rgba(255, 255, 255, 0.15);
+
+  /* ⚪ Background */
+  --main-bg: #f4f7fb;
+  --card-bg: #ffffff;
+
+  /* 🟩 Status Colors */
+  --success: #4caf93;
+  --success-bg: #dff5ee;
+
+  --warning: #f4a261;
+  --warning-bg: #fdebdc;
+
+  --danger: #e76f51;
+  --danger-bg: #fde2dc;
+
+  /* 📝 Text */
+  --text-dark: #2c3e50;
+  --text-light: #7b8a97;
+
+  /* 🟫 Borders & Shadow */
+  --border: #e0e6ed;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form {
+  width: 80%;
+}
+.form input {
+  width: 85%;
+  height: 30px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid var(--border);
+}
+.form button {
+  border: 1px solid var(--border);
+  border-radius: 0 10px 10px 0;
+}
+.form button svg {
+  fill: var(--primary);
+}
+.login {
+  width: 15%;
+  position: relative;
+}
+.login svg {
+  font-size: x-large !important;
+  fill: #5b8cc9;
+}
+.login .userName {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: 0.3s ease-in-out;
+  border-radius: 7px;
+  box-shadow: 0 6px 18px rgba(27, 62, 105, 0.16);
+  margin-top: 10px;
+  border: 1px solid var(--border);
+}
+.login .userName.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.login .userName span {
+  font-size: small;
+  font-weight: 700;
+}
+.login .userName span span {
+  font-size: small;
+  font-weight: 500;
+}
+.open {
+  display: none;
+}
+/* .userName {
+  position: relative;
+  background-color: red;
+  width: fit-content;
+  height: fit-content;
+}
+.userName div {
+  position: absolute;
+  width: calc(100% + 20px);
+  background-color: #2c3e50;
+} */

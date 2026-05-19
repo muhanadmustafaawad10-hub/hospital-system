@@ -1,0 +1,14 @@
+.thecard {
+  border-radius: 10px;
+}
+
+.thecard span:first-of-type {
+  font-size: 30px;
+}
+.thecard span:last-of-type {
+  font-size: 40px;
+}
+
+.thecard p {
+  font-weight: bold;
+}

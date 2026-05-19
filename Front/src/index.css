@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  /* 🎨 Main Colors */
+  --primary: #5b8cc9;
+  --primary-light: #e7f0fb;
+
+  /* 🟦 Sidebar */
+  --sidebar-bg: linear-gradient(180deg, #6ea8dc, #5b8cc9);
+  --sidebar-text: #ffffff;
+  --sidebar-hover: rgba(255, 255, 255, 0.15);
+
+  /* ⚪ Background */
+  --main-bg: #f4f7fb;
+  --card-bg: #ffffff;
+
+  /* 🟩 Status Colors */
+  --success: #4caf93;
+  --success-bg: #dff5ee;
+
+  --warning: #f4a261;
+  --warning-bg: #fdebdc;
+
+  --danger: #e76f51;
+  --danger-bg: #fde2dc;
+
+  /* 📝 Text */
+  --text-dark: #2c3e50;
+  --text-light: #7b8a97;
+
+  /* 🟫 Borders & Shadow */
+  --border: #e0e6ed;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none !important;
+  color: white !important;
+}
+.mainContainer {
+  width: 95%;
+  margin: auto;
+}
+
+button,
+input {
+  outline: none;
+}
+input {
+  border: 1px solid #e0e6ed;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.068);
+  transition: 0.4s;
+}
+.addDoctors input {
+  border-radius: 10px;
+}
+input:focus {
+  /* box-shadow: 0 0 0 4px rgba(91, 140, 201, 0.2); */
+  border: 1px solid var(--primary);
+}
+.addDoctor form button {
+  background-color: #5b8cc9;
+}
+.addDoctor form button svg {
+  fill: white;
+}
+.DashContainer {
+  width: 80%;
+  margin-left: 20%;
+  background-color: var(--main-bg);
+}
+
+.btnAdd {
+  background-color: var(--primary);
+  /* font-weight: bold; */
+  color: white;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btnAdd:hover {
+  background-color: #3f6fa8;
+}
+section {
+  height: 100vh;
+}
+
+input,
+button {
+  border: 0;
+  outline: 0;
+  border: 1px solid var(--border);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #4caf934b;
+}
+
+.opening {
+  position: fixed;
+  left: 0;
+  /* top: 25px; */
+  top: 0;
+  display: none;
+}
+.opening svg {
+  font-size: xx-large;
+  fill: var(--primary);
+}
+
+.Nav strong {
+  position: absolute;
+  right: 5%;
+  display: none;
+}
+.Nav strong svg {
+  font-size: xx-large;
+  font-weight: bold;
+}
+@media (max-width: 1025px) {
+  .theForm {
+    width: 80% !important;
+    padding: 50px 0 !important;
+  }
+
+  .DashContainer {
+    width: 100% !important;
+    margin-left: 0;
+    background-color: var(--main-bg);
+    padding: 10px 15px !important;
+  }
+  .addDoctors {
+    width: 80% !important;
+    left: 10%;
+    top: 32%;
+  }
+  .opening {
+    display: block;
+  }
+  .Nav {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: 0.3s ease-in-out;
+  }
+  .Nav.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 100%;
+    z-index: 1000;
+  }
+  .Nav strong {
+    display: block;
+  }
+  .Dash {
+    margin-top: 10px !important;
+  }
+  .Contact .contactUs {
+    width: 90% !important;
+  }
+}
+@media (max-width: 600px) {
+  .theForm {
+    width: 80% !important;
+  }
+  .form {
+    width: 60%;
+  }
+  .login {
+    width: 35%;
+  }
+  .login .userName span span {
+    font-size: xx-small;
+  }
+  .Appoint p {
+    font-size: xx-small;
+    font-weight: 800;
+  }
+  .doctorcard p {
+    font-size: small;
+    font-weight: 800;
+  }
+
+  .pending,
+  .confirmed {
+    font-size: x-small;
+  }
+  .onecard strong {
+    font-size: small;
+  }
+  .DoctorList {
+    width: 100% !important;
+  }
+  .DoctorList .addDoctor {
+    font-size: x-small;
+  }
+  .addDoctor .btnAdd {
+  }
+  .content ul li {
+    font-size: xx-small;
+  }
+  .EditDelete {
+    display: flex;
+    gap: 5px !important;
+  }
+  .EditDelete div {
+    /* font-size: xx-small; */
+    padding: 5px !important;
+  }
+
+  .addDoctors {
+    width: 90% !important;
+    left: 5%;
+    top: 32%;
+  }
+  .opening {
+    display: block;
+  }
+  .Nav {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: 0.3s ease-in-out;
+  }
+  .Nav.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 100%;
+    z-index: 1000;
+  }
+  .Nav strong {
+    display: block;
+  }
+  .Dash {
+    margin-top: 10px !important;
+  }
+  .Contact .contactUs {
+    width: 90% !important;
+  }
+  .scedule {
+    width: 90% !important;
+  }
+  .scedule ul {
+    font-size: xx-small;
+  }
+  .headstates ul {
+    font-size: xx-small;
+  }
+  .heads {
+    font-size: xx-small;
+  }
+  .scedule h2 {
+    font-size: x-small;
+  }
+  .DoctorList form div {
+    height: 110px !important;
+    bottom: -110px !important;
+  }
+  .theDetails {
+    width: 90% !important;
+  }
+}
+
+.DoctorList form {
+  position: relative;
+}
+.DoctorList form div {
+  position: absolute;
+  background-color: white;
+  width: 80%;
+  /* bottom: -450%; */
+  bottom: -172px;
+  height: 172px;
+  z-index: 1000000;
+  overflow-y: auto;
+  color: #2c3e50 !important;
+  border: 3px solid var(--primary);
+}
+.DoctorList form div a {
+  color: #2c3e50 !important;
+}
+
+.DoctorList form div li {
+  border-bottom: 1px solid var(--border);
+
+  transition: 0.3s;
+}
+.DoctorList form div li:hover {
+  background-color: #dff5ee;
+}
+.DoctorList form div li:hover a {
+  color: #5b8cc9 !important;
+}
+
+.booked {
+  background-color: #e74c3c;
+  width: fit-content;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  padding: 5px;
+}
+.Available {
+  background-color: var(--success);
+  width: fit-content;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  padding: 5px;
+}
