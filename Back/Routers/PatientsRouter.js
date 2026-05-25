@@ -8,7 +8,7 @@ router.post("/",async (req, res) => {
     newPatient.disease=req.body.data.Disease
     newPatient.phone = req.body.data.Phone
     await newPatient.save()
-    res.send(req.body)
+    res.send(newPatient)
 })
 
 router.get("/",async (req, res) => {
@@ -46,7 +46,7 @@ router.get("/Edit",async (req, res) => {
 router.get("/Search",async (req, res) => {
     const value = req.query.q
     const alldata =await PatientDataModel.find()
-    const filterd = alldata.filter((ele) => ele.name.startsWith(value))
+    const filterd = alldata.filter((ele) => ele.name.toLocaleLowerCase().startsWith(value.toLocaleLowerCase()))
     res.send(filterd)
 
 

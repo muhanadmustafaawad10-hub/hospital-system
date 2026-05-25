@@ -37,7 +37,7 @@ const Topheader = ({ RegisterName, LoginName }) => {
         <div className={`userName ${Toggle ? "active" : ""}`}>
           {" "}
           <span>
-            <strong>User Name:</strong>{" "}
+            <strong>User Name:</strong>
             <span> {RegisterName || LoginName}</span>
           </span>
         </div>

@@ -60,7 +60,7 @@ router.get("/Edit",async (req, res) => {
 router.get("/Search",async (req, res) => {
     const value = req.query.q
     const alldata = await DoctorDataBase.find()
-    const filterd = alldata.filter((ele) => ele.name.startsWith(value))
+    const filterd = alldata.filter((ele) => ele.name.toLocaleLowerCase().startsWith(value.toLocaleLowerCase()))
     res.send(filterd)
 })
 

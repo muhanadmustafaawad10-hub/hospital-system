@@ -36,7 +36,8 @@
 }
 .scedule {
   background-color: white;
-  z-index: 100000000000 !important;
+  z-index: 100000 !important;
+
   border-radius: 10px;
 }
 .scedule h2 {

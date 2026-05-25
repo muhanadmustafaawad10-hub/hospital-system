@@ -8,7 +8,7 @@ import { GrNotes } from "react-icons/gr";
 import Status from "./Status/Status";
 import MainCards from "./MainCards/MainCards";
 
-const Dash = ({ allData, RegisterName, LoginName,GetgeneralData }) => {
+const Dash = ({ allData, RegisterName, LoginName, GetgeneralData }) => {
   const cards = [
     {
       title: "Total Patient",
@@ -37,7 +37,7 @@ const Dash = ({ allData, RegisterName, LoginName,GetgeneralData }) => {
   ];
 
   return (
-    <div className="Dash   DashContainer ">
+    <div className="Dash   DashContainer mt-0">
       <Topheader RegisterName={RegisterName} LoginName={LoginName} />
       <Status allData={allData} cards={cards} />
       <MainCards allData={allData} GetgeneralData={GetgeneralData} />

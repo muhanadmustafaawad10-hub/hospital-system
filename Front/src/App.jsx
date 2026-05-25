@@ -66,12 +66,12 @@ function App() {
 
   useEffect(() => {
     setToggle(false);
-    options
-      .filter((i) => i.name !== "Contact")
-      .forEach((ele) => {
-        if (location.pathname === ele.path) setStatus(true);
-      });
-
+    options.forEach((ele) => {
+      if (location.pathname === ele.path) setStatus(true);
+    });
+    if (location.pathname === "/") {
+      setStatus(false);
+    }
     GetgeneralData();
     seta(true);
   }, [location]);
@@ -193,11 +193,7 @@ function App() {
             element={<AllDetails setStatus={setStatus} />}
           />
         </Routes>
-        {Status ? (
-          <div className="overlay" onClick={() => setStatus(false)}></div>
-        ) : (
-          ""
-        )}
+        {Status ? <div className="overlay"></div> : ""}
         <div className="opening" onClick={() => setToggle(true)}>
           <FaList />
         </div>

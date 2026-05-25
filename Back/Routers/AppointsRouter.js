@@ -8,7 +8,7 @@ router.post("/",async (req, res) => {
     newAppoint.date=req.body.data.Date
     newAppoint.time = req.body.data.Time
   await  newAppoint.save()
-res.send(`success:${newAppoint}`)
+res.send(newAppoint)
 })
 
 router.get("/",async (req, res) => {
@@ -46,7 +46,7 @@ router.get("/Edit",async (req, res) => {
 router.get("/Search",async (req, res) => {
     const value = req.query.q
     const alldata =await AppointData.find()
-    const filterd = alldata.filter((ele) => ele.doctor.startsWith(value))
+    const filterd = alldata.filter((ele) => ele.doctor.toLocaleLowerCase().startsWith(value.toLocaleLowerCase()))
     res.send(filterd)
 
 

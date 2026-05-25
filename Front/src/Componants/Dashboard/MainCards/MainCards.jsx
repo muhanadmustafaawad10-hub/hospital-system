@@ -5,6 +5,7 @@ import axios from "axios";
 import Doctors from "./Doctors";
 import Appointments from "./Appointments";
 import Patients from "./Patients";
+import toast from "react-hot-toast";
 
 const MainCards = ({ allData, GetgeneralData }) => {
   const PatientsKeys = ["Name", "Age", "Disease", "Phone"];
@@ -29,6 +30,13 @@ const MainCards = ({ allData, GetgeneralData }) => {
       .then((res) => {
         setPatientState({ Name: "", Age: "", Disease: "", Phone: "" });
         GetgeneralData();
+
+        toast.success(
+          <p className="toaster">
+            Patient <span className="toasting">{res.data.name}</span> added
+            successfully
+          </p>,
+        );
       });
   };
   return (

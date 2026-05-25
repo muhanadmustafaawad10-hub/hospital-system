@@ -10,6 +10,7 @@ import { Pagination } from "swiper/modules";
 import { FaSearch } from "react-icons/fa";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 const MainSide = ({
   Manage,
   name,
@@ -32,14 +33,26 @@ const MainSide = ({
     axios.delete(`http://localhost:4000/${name}?id=${id}`).then((res) => {
       console.log(res);
       getData();
+      if (name === "Doctors") {
+        toast.error(`Doctor deleted successfully`);
+      }
+      if (name === "Patients") {
+        toast.error(`Patient deleted successfully`);
+      }
+      if (name === "Appointments") {
+        toast.error(`Appointment deleted successfully`);
+      }
     });
   };
 
   const handleEdit = (id) => {
+    console.log("Clicked:", id);
     setEditstatus(true);
     // document.querySelector(".DoctorList").style.zIndex = 0;
     // setStatus(true);
-    Manage();
+    setstatus(true);
+    document.querySelector(".DoctorList").style.zIndex = 0;
+    setStatus(true);
     // setstatus(true);
     // document.querySelector(".DoctorList").style.zIndex = 0;
     // setStatus(true);
@@ -99,7 +112,9 @@ const MainSide = ({
                   ? SearchData.map((ele) => {
                       return (
                         <Link to={`/Details/${name}/${ele._id}`}>
-                          <li className="pb-1 pt-1">{ele.name || ele.doctor}</li>
+                          <li className="pb-1 pt-1">
+                            {ele.name || ele.patient}
+                          </li>
                         </Link>
                       );
                     })

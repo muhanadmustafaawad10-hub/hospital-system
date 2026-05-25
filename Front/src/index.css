@@ -169,7 +169,7 @@ button {
     display: block;
   }
   .Dash {
-    margin-top: 10px !important;
+    padding-top: 25px !important;
   }
   .Contact .contactUs {
     width: 90% !important;
@@ -229,6 +229,9 @@ button {
     left: 5%;
     top: 32%;
   }
+  .addDoctors label {
+    font-size: small;
+  }
   .opening {
     display: block;
   }
@@ -245,7 +248,7 @@ button {
     display: block;
   }
   .Dash {
-    margin-top: 10px !important;
+    padding-top: 25px !important;
   }
   .Contact .contactUs {
     width: 90% !important;
@@ -271,6 +274,9 @@ button {
   }
   .theDetails {
     width: 90% !important;
+  }
+  .toaster {
+    font-size: small;
   }
 }
 
@@ -312,6 +318,7 @@ button {
   border: 0;
   color: white;
   padding: 5px;
+  font-weight: 500;
 }
 .Available {
   background-color: var(--success);
@@ -320,4 +327,32 @@ button {
   border: 0;
   color: white;
   padding: 5px;
+  font-weight: 500;
+}
+
+.toaster {
+  margin: 0 !important;
+}
+.toasting {
+  color: #2563eb;
+  /* font-weight: 700; */
+  padding-right: 1px !important;
+}
+
+.addDoctors form {
+  border-bottom: 0;
+}
+.userName strong {
+  color: #2c3e50;
+}
+.userName span {
+  color: #2563eb;
+}
+
+textarea {
+  border: 1px solid var(--border);
+  transition: 0.3s ease-in-out;
+}
+textarea:focus {
+  border-color: #5b8cc9;
 }
