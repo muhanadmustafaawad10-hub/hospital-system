@@ -34,7 +34,7 @@ router.post("/Login",async (req, res) => {
     if (status) {
         const passwordStatus = await bcrypt.compare(password, status.password)
         if (passwordStatus) {
-            res.send({msg:"successfully login",name:name})
+            res.send({msg:"successfully login",name:status.name})
         } else {
         res.send("Login failed. Please check your Email and password")
             

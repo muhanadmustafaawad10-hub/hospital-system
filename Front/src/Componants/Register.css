@@ -64,3 +64,33 @@
   border-radius: 6px;
   margin: 0 !important;
 }
+
+.dis {
+  pointer-events: none;
+  background-color: #a3a9b0 !important;
+  cursor: not-allowed !important;
+  opacity: 0.8;
+  box-shadow: none !important;
+}
+
+.option div {
+  background-color: #5b8cc9;
+  padding: 5px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+.option .Reg {
+  border-radius: 6px 0 0 6px;
+  border-right: 1px solid var(--border);
+}
+.option .Log {
+  border-radius: 0 6px 6px 0;
+}
+
+.dis2 {
+  background-color: #f1f5f9 !important;
+  opacity: 0.8;
+  box-shadow: none !important;
+  color: #5b8cc9 !important;
+}

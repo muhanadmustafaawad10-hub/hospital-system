@@ -4,6 +4,7 @@ import "./Register.css";
 const Registing = ({ setRegister, setLogin, setAuth }) => {
   const [MsgEmail, setMsgEmail] = useState("");
   const [MsgPassword, setMsgPassword] = useState("");
+  const [Option, setOption] = useState(false);
   const [input, setInput] = useState({
     email: "",
     password: "",
@@ -36,13 +37,7 @@ const Registing = ({ setRegister, setLogin, setAuth }) => {
   };
 
   const handleLogin = () => {
-    if (
-      input.name !== "" &&
-      input.email !== "" &&
-      input.password !== "" &&
-      input.mobile !== "" &&
-      input.adress !== ""
-    ) {
+    if (input.email !== "" && input.password !== "") {
       axios
         .post("http://localhost:4000/Form/Login", {
           data: input,
@@ -62,46 +57,68 @@ const Registing = ({ setRegister, setLogin, setAuth }) => {
   return (
     <div className="register  d-flex justify-content-center align-items-center">
       <div className="d-flex theForm w-50 p-5 flex-column align-items-center gap-2 ">
-        <h2 className="pb-3">Please Sign in</h2>
+        <h2 className="pb-1 ">Please Sign in</h2>
         <form
           onSubmit={(e) => e.preventDefault()}
           className="d-flex w-75 flex-column gap-3"
         >
-          <input
-            required
-            value={input.name}
-            placeholder="Enter Your Name"
-            className="w-100"
-            type="text"
-            onChange={(e) =>
-              setInput((prev) => {
-                return { ...prev, name: e.target.value };
-              })
-            }
-          />
+          <div className="option d-flex justify-content-center align-items-center ">
+            <div
+              className={`${Option === true ? "dis2" : ""} Reg`}
+              onClick={() => setOption(false)}
+            >
+              Register
+            </div>
+            <div
+              className={`${Option === false ? "dis2" : ""} Log`}
+              onClick={() => setOption(true)}
+            >
+              {" "}
+              Login
+            </div>
+          </div>
 
-          <input
-            type="text"
-            required
-            value={input.mobile}
-            placeholder="Enter your mobile phone"
-            onChange={(e) =>
-              setInput((prev) => {
-                return { ...prev, mobile: e.target.value };
-              })
-            }
-          />
-          <input
-            type="text"
-            required
-            value={input.adress}
-            placeholder="Enter your Adress"
-            onChange={(e) =>
-              setInput((prev) => {
-                return { ...prev, adress: e.target.value };
-              })
-            }
-          />
+          {Option === false ? (
+            <>
+              {" "}
+              <input
+                required
+                value={input.name}
+                placeholder="Enter Your Name"
+                className="w-100"
+                type="text"
+                onChange={(e) =>
+                  setInput((prev) => {
+                    return { ...prev, name: e.target.value };
+                  })
+                }
+              />
+              <input
+                type="text"
+                required
+                value={input.mobile}
+                placeholder="Enter your mobile phone"
+                onChange={(e) =>
+                  setInput((prev) => {
+                    return { ...prev, mobile: e.target.value };
+                  })
+                }
+              />
+              <input
+                type="text"
+                required
+                value={input.adress}
+                placeholder="Enter your Adress"
+                onChange={(e) =>
+                  setInput((prev) => {
+                    return { ...prev, adress: e.target.value };
+                  })
+                }
+              />
+            </>
+          ) : (
+            ""
+          )}
 
           <input
             value={input.email}
@@ -127,20 +144,28 @@ const Registing = ({ setRegister, setLogin, setAuth }) => {
               })
             }
           />
-          {MsgEmail.length > 0 ? <p className=" msg">{MsgEmail}</p> : ""}
-          {MsgPassword.length > 0 ? <p className=" msg">{MsgPassword}</p> : ""}
+          {MsgEmail.length > 0 && Option === false ? (
+            <p className=" msg">{MsgEmail}</p>
+          ) : (
+            ""
+          )}
+          {MsgPassword.length > 0 && Option === true ? (
+            <p className=" msg">{MsgPassword}</p>
+          ) : (
+            ""
+          )}
           <div className="op mt-2 w-100 d-flex flex-column  align-items-center gap-2 text-center">
             {" "}
             <button
               type="submit"
-              className="btnAdd w-75 text-center"
+              className={`${Option === true ? "dis" : ""} btnAdd w-75 text-center`}
               onClick={() => handleRegister()}
             >
               Register
             </button>
             <button
               type="submit"
-              className="btnAdd w-75 text-center"
+              className={`${Option === false ? "dis" : ""} btnAdd w-75 text-center`}
               onClick={() => handleLogin()}
             >
               Log In
